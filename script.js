@@ -1,10 +1,23 @@
-// Expand single letter logo to full name
+// Expand single letter logo to full name with animation
 function expandLogo() {
   const logo = document.getElementById('dynamic-logo');
+
   if (logo.innerText === 'F') {
-    logo.innerText = 'Faheem Iqbal';
+    logo.style.opacity = 0;
+    setTimeout(() => {
+      logo.innerText = 'Faheem Iqbal';
+      logo.style.fontSize = '3em';
+      logo.style.transition = 'font-size 0.5s ease, opacity 0.5s ease';
+      logo.style.opacity = 1;
+    }, 300);
   } else {
-    logo.innerText = 'F';
+    logo.style.opacity = 0;
+    setTimeout(() => {
+      logo.innerText = 'F';
+      logo.style.fontSize = '8em';
+      logo.style.transition = 'font-size 0.5s ease, opacity 0.5s ease';
+      logo.style.opacity = 1;
+    }, 300);
   }
 }
 
