@@ -10,16 +10,19 @@
   <canvas id="bg"></canvas>
 
   <div class="navbar">
-    <a href="#" onclick="showPage('home')">Home</a>
-    <a href="#" onclick="showPage('about')">About Me</a>
-    <a href="#" onclick="showPage('experience')">Experience</a>
-    <a href="#" onclick="showPage('skills')">Skills</a>
-    <a href="#" onclick="showPage('contact')">Contact</a>
+    <a href="#" onclick="showPage('home')">🏠 Home</a>
+    <a href="#" onclick="showPage('about')">🧑‍💼 About</a>
+    <a href="#" onclick="showPage('experience')">📈 Experience</a>
+    <a href="#" onclick="showPage('skills')">🧠 Skills</a>
+    <a href="#" onclick="showPage('contact')">📬 Contact</a>
   </div>
 
   <div id="rotating-frame">
-    <div class="circle circle-left"></div>
-    <div class="circle circle-right"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
     <div id="center-info">
       <div class="logo-container" onclick="expandLogo()">
         <div id="dynamic-logo">F</div>
@@ -28,7 +31,6 @@
     </div>
   </div>
 
-  <!-- Fixed navigation buttons OUTSIDE of rotating frame -->
   <div class="nav-buttons">
     <button onclick="prevPage()">⟵ Prev</button>
     <button onclick="nextPage()">Next ⟶</button>
@@ -36,47 +38,46 @@
 
   <div id="pages">
     <section id="home" class="page active fade-in">
-      <img src="img/home.jpg" class="section-img" alt="Home Image"/>
+      <img src="img/home.svg" class="section-img" alt="Home"/>
       <h1>Hi, I'm Faheem Iqbal</h1>
       <p>Customer Experience Leader | CRM Specialist | Team Lead</p>
     </section>
 
     <section id="about" class="page">
-      <img src="img/about.jpg" class="section-img" alt="About Me"/>
+      <img src="img/about.svg" class="section-img" alt="About Me"/>
       <h2>About Me</h2>
       <p>
-        I’m a passionate and detail-driven Customer Experience Manager with 4+ years of success in leading high-performing global support teams.
+        Passionate CX Leader with 4+ years building scalable support operations across international markets. Obsessed with quality, systems, and results.
       </p>
     </section>
 
     <section id="experience" class="page">
-      <img src="img/experience.jpg" class="section-img" alt="Experience"/>
+      <img src="img/experience.svg" class="section-img" alt="Experience"/>
       <h2>Experience</h2>
       <ul>
-        <li><strong>Snoonu</strong>: Team Lead - Led 150+ agents, improved CSAT by 20%.</li>
-        <li><strong>Orian Stars</strong>: Support Rep - Resolved 100+ daily queries.</li>
+        <li><strong>Snoonu</strong>: Team Lead – Led 150+ agents, +20% CSAT growth</li>
+        <li><strong>Orian Stars</strong>: Customer Support – Managed high-ticket volumes</li>
       </ul>
     </section>
 
     <section id="skills" class="page">
-      <img src="img/skills.jpg" class="section-img" alt="Skills"/>
+      <img src="img/skills.svg" class="section-img" alt="Skills"/>
       <h2>Skills</h2>
       <ul>
         <li>CRM: Zendesk, Salesforce</li>
-        <li>Analytics: Power BI</li>
-        <li>Leadership: Onboarding, QA Mentoring</li>
+        <li>Analytics: Power BI, Workflow Automation</li>
+        <li>Leadership: Training, QA Mentoring</li>
       </ul>
     </section>
 
     <section id="contact" class="page">
-      <img src="img/contact.jpg" class="section-img" alt="Contact"/>
+      <img src="img/contact.svg" class="section-img" alt="Contact"/>
       <h2>Contact</h2>
       <p>Email: faheemiqbal993@gmail.com</p>
-      <p><a href="resume_faheem.pdf" download>Download Resume</a></p>
+      <p><a href="resume_faheem.pdf" download>📄 Download Resume</a></p>
     </section>
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
   <script src="canvas_background.js"></script>
