@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faheem Iqbal | 3D Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <div class="navbar">
+    <a href="#home" onclick="switchLogo('home')">Home</a>
+    <a href="#about" onclick="switchLogo('about')">About Me</a>
+    <a href="#experience" onclick="switchLogo('experience')">Experience</a>
+    <a href="#skills" onclick="switchLogo('skills')">Skills</a>
+    <a href="#contact" onclick="switchLogo('contact')">Contact</a>
+  </div>
+
+  <section id="home">
+    <div class="logo-container" onclick="expandLogo()">
+      <div id="dynamic-logo">F</div>
+    </div>
+    <h1>Hi, I'm Faheem Iqbal</h1>
+    <p>Customer Experience Leader | CRM Specialist | Team Lead</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Dynamic Customer Experience Leader with 4+ years in fast-paced, multi-channel environments.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Snoonu, Qatar (2021-Present)</strong>: Led 150+ support agents, improved CSAT by 20%, introduced QA systems.</li>
+      <li><strong>Orian Stars, Pakistan (2019-2021)</strong>: Resolved 100+ daily inquiries, optimized ticket handling time.</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>CRM: Zendesk, Salesforce</li>
+      <li>WFM, QA: Real-time dashboards, QA scorecards</li>
+      <li>Analytics: Power BI, Process Automation</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: faheemiqbal993@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/faheem-iqbal-a637b7162/" target="_blank">Visit Profile</a></p>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
