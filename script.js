@@ -46,7 +46,21 @@ document.addEventListener('click', function (e) {
   setTimeout(() => pulse.remove(), 1000);
 });
 
-// Particle background (simple Three.js scene)
+// Animate page transitions with fade
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => {
+    if (page.id === pageId) {
+      page.classList.add('fade-in');
+      page.classList.add('active');
+    } else {
+      page.classList.remove('active');
+      page.classList.remove('fade-in');
+    }
+  });
+}
+
+// Particle background (Three.js scene)
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg') });
