@@ -4,7 +4,8 @@ body, html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #0a0f1b;
   color: #f0f8ff;
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100vh;
 }
 
 canvas#bg {
@@ -17,17 +18,18 @@ canvas#bg {
 .navbar {
   display: flex;
   justify-content: center;
-  background: #0d1426;
-  padding: 0.7em;
-  position: sticky;
+  background: rgba(10, 20, 40, 0.9);
+  padding: 0.5em;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  width: 100%;
+  z-index: 999;
 }
 
 .navbar a {
-  margin: 0 0.8em;
   color: #00ffff;
   text-decoration: none;
+  margin: 0 1em;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -36,104 +38,12 @@ canvas#bg {
   color: #88f0ff;
 }
 
-section {
-  padding: 2.5em 1.5em;
-  max-width: 960px;
-  margin: auto;
-}
-
-.logo-container {
-  text-align: center;
-  margin-top: 2em;
-  cursor: pointer;
-  position: relative;
-}
-
-#dynamic-logo {
-  font-size: 8em;
-  color: #00ffff;
-  font-weight: bold;
-  transition: all 0.5s ease-in-out;
-  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
-  opacity: 1;
-}
-
-.click-pulse {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #00ffff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 1s ease-out forwards;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(5);
-  }
-}
-
-/* Sparkle and ripple for logo effect */
-.sparkle, .ripple {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.sparkle {
-  width: 10px;
-  height: 10px;
-  background: #00ffff;
-  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-  animation: sparkle-anim 0.8s ease-out forwards;
-}
-
-.ripple {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #00ffff;
-  animation: ripple-anim 0.8s ease-out forwards;
-}
-
-@keyframes sparkle-anim {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(3);
-  }
-}
-
-@keyframes ripple-anim {
-  0% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(4);
-  }
-}
-
-/* Fullscreen section transitions */
 .page {
   display: none;
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  padding: 3em 2em;
+  transition: opacity 2s;
+  padding-top: 100px;
+  text-align: center;
   min-height: 100vh;
 }
 
@@ -142,11 +52,84 @@ section {
   opacity: 1;
 }
 
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
+#rotating-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.circle {
+  width: 250px;
+  height: 250px;
+  border: 2px dashed #00ffff;
+  border-radius: 50%;
+  position: absolute;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.circle-left {
+  animation-name: spin-left;
+}
+
+.circle-right {
+  animation-name: spin-right;
+}
+
+@keyframes spin-left {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes spin-right {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#center-info {
+  text-align: center;
+  color: #00ffff;
+  pointer-events: auto;
+}
+
+.logo-container {
+  cursor: pointer;
+  font-size: 4em;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 1em;
+}
+
+.nav-buttons {
+  margin-top: 1em;
+}
+
+.nav-buttons button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-buttons button:hover {
+  background: #00ffff;
+  color: #0a0f1b;
+}
+
+.section-img {
+  width: 100%;
+  max-width: 500px;
+  margin: 1em auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
 }
