@@ -1,3 +1,4 @@
+// Updated script.js with 5s logo transition and responsive logic
 let currentIndex = 0;
 const sections = ['home', 'about', 'experience', 'skills', 'contact'];
 const infoText = {
@@ -37,12 +38,11 @@ function expandLogo() {
   }, 2000);
 }
 
-// Automatic logo toggle
+// Auto toggle logo every 5 seconds (2s fade, 3s pause)
 setInterval(() => {
   expandLogo();
-}, 4000);
+}, 5000);
 
-// Show home by default
 window.onload = () => {
   showPage('home');
 };
