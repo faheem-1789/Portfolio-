@@ -2,7 +2,7 @@
 let currentIndex = 0;
 const sections = ['home', 'about', 'experience', 'skills', 'contact'];
 const infoText = {
-  home: 'Welcome to my futuristic portfolio.',
+  home: 'Welcome to my portfolio.',
   about: 'Learn more about my background.',
   experience: 'Explore my past work and roles.',
   skills: 'Check out my technical and leadership skills.',
