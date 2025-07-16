@@ -106,13 +106,11 @@ canvas#bg {
 }
 
 .nav-buttons {
-  position: absolute;
-  bottom: 5%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2em;
   pointer-events: auto;
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  z-index: 999;
 }
 
 .nav-buttons button {
@@ -124,6 +122,16 @@ canvas#bg {
   border-radius: 5px;
   transition: background 0.3s;
   cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-buttons button:first-child {
+  left: 30px;
+}
+
+.nav-buttons button:last-child {
+  right: 30px;
 }
 
 .nav-buttons button:hover {
