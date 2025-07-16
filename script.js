@@ -1,24 +1,33 @@
-// Expand single letter logo to full name with animation
+// Expand single letter logo to full name with sparkle, ripple, and fade effect
 function expandLogo() {
   const logo = document.getElementById('dynamic-logo');
+  const container = document.querySelector('.logo-container');
 
-  if (logo.innerText === 'F') {
-    logo.style.opacity = 0;
-    setTimeout(() => {
+  // Create sparkle effect
+  const sparkle = document.createElement('div');
+  sparkle.classList.add('sparkle');
+  container.appendChild(sparkle);
+  setTimeout(() => sparkle.remove(), 800);
+
+  // Create ripple
+  const ripple = document.createElement('div');
+  ripple.classList.add('ripple');
+  container.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 800);
+
+  // Fade out and change
+  logo.style.transition = 'opacity 0.5s ease';
+  logo.style.opacity = 0;
+  setTimeout(() => {
+    if (logo.innerText === 'F') {
       logo.innerText = 'Faheem Iqbal';
       logo.style.fontSize = '3em';
-      logo.style.transition = 'font-size 0.5s ease, opacity 0.5s ease';
-      logo.style.opacity = 1;
-    }, 300);
-  } else {
-    logo.style.opacity = 0;
-    setTimeout(() => {
+    } else {
       logo.innerText = 'F';
       logo.style.fontSize = '8em';
-      logo.style.transition = 'font-size 0.5s ease, opacity 0.5s ease';
-      logo.style.opacity = 1;
-    }, 300);
-  }
+    }
+    logo.style.opacity = 1;
+  }, 500);
 }
 
 // Switch logo styles per section (future extension placeholder)
