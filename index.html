@@ -3,66 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faheem Iqbal | 3D Portfolio</title>
+  <title>Faheem Iqbal | Futuristic Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <canvas id="bg"></canvas>
 
   <div class="navbar">
-    <a href="#home" onclick="switchLogo('home')">Home</a>
-    <a href="#about" onclick="switchLogo('about')">About Me</a>
-    <a href="#experience" onclick="switchLogo('experience')">Experience</a>
-    <a href="#skills" onclick="switchLogo('skills')">Skills</a>
-    <a href="#contact" onclick="switchLogo('contact')">Contact</a>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('about')">About Me</a>
+    <a href="#" onclick="showPage('experience')">Experience</a>
+    <a href="#" onclick="showPage('skills')">Skills</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
   </div>
 
-  <section id="home">
-    <div class="logo-container" onclick="expandLogo()">
-      <div id="dynamic-logo">F</div>
-    </div>
-    <h1>Hi, I'm Faheem Iqbal</h1>
-    <p>Customer Experience Leader | CRM Specialist | Team Lead</p>
-  </section>
+  <div id="pages">
+    <section id="home" class="page active">
+      <div class="logo-container" onclick="expandLogo()">
+        <div id="dynamic-logo">F</div>
+      </div>
+      <h1>Hi, I'm Faheem Iqbal</h1>
+      <p>Customer Experience Leader | CRM Specialist | Team Lead</p>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a passionate and detail-driven Customer Experience Manager with over 4 years of success in leading high-performing global support teams and delivering measurable improvements in customer satisfaction, retention, and service level metrics. My strength lies in combining people leadership, data analytics, and CRM optimization to build seamless, scalable customer journeys.
-    </p>
-    <p>
-      From onboarding and training 150+ agents to integrating automation workflows and triage processes that reduced resolution times by 30%, I thrive in dynamic, fast-paced environments where empathy, innovation, and results intersect. I'm also a certified Power BI analyst and advocate for emotional intelligence and trust-building in customer relations.
-    </p>
-    <p>
-      Fluent in English, Urdu, Arabic, and Hindi, I’m always seeking opportunities to make meaningful impact through strategic collaboration and tech-enabled service design.
-    </p>
-  </section>
+    <section id="about" class="page">
+      <h2>About Me</h2>
+      <p>
+        I’m a passionate and detail-driven Customer Experience Manager with 4+ years of success in leading high-performing global support teams and delivering measurable improvements in customer satisfaction, retention, and service level metrics.
+      </p>
+      <p>
+        From onboarding and training 150+ agents to integrating automation workflows and triage processes that reduced resolution times by 30%, I thrive in fast-paced environments where empathy, innovation, and results intersect.
+      </p>
+      <p>
+        Fluent in English, Urdu, Arabic, and Hindi, and a certified Power BI analyst, I build trust-driven, scalable customer journeys through tech and team empowerment.
+      </p>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Snoonu, Qatar (2021-Present)</strong>: Led 150+ support agents, improved CSAT by 20%, introduced QA systems.</li>
-      <li><strong>Orian Stars, Pakistan (2019-2021)</strong>: Resolved 100+ daily inquiries, optimized ticket handling time.</li>
-    </ul>
-  </section>
+    <section id="experience" class="page">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Snoonu, Qatar</strong> – Team Lead (2021–Present): Led 150+ agents, improved CSAT by 20%, introduced QA systems, and optimized ticket triage.</li>
+        <li><strong>Orian Stars, Pakistan</strong> – Support Rep (2019–2021): Handled 100+ daily inquiries, boosted resolution times and QA standards.</li>
+      </ul>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>CRM: Zendesk, Salesforce</li>
-      <li>WFM, QA: Real-time dashboards, QA scorecards</li>
-      <li>Analytics: Power BI, Process Automation</li>
-    </ul>
-  </section>
+    <section id="skills" class="page">
+      <h2>Skills</h2>
+      <ul>
+        <li>CRM Platforms: Zendesk, Salesforce</li>
+        <li>WFM Tools: Real-time Dashboards, Scheduling</li>
+        <li>Analytics: Power BI, Ticket Triage Automation</li>
+        <li>Leadership: Coaching, Onboarding, QA Mentoring</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: faheemiqbal993@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/faheem-iqbal-a637b7162/" target="_blank">Visit Profile</a></p>
-  </section>
+    <section id="contact" class="page">
+      <h2>Contact</h2>
+      <p>Email: faheemiqbal993@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/faheem-iqbal-a637b7162/" target="_blank">Visit Profile</a></p>
+      <p><a href="resume_faheem.pdf" download>Download Resume</a></p>
+    </section>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
   <script src="script.js"></script>
+  <script src="canvas_background.js"></script>
 </body>
 </html>
