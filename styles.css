@@ -18,14 +18,14 @@ canvas#bg {
   display: flex;
   justify-content: center;
   background: #0d1426;
-  padding: 1em;
+  padding: 0.7em;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .navbar a {
-  margin: 0 1em;
+  margin: 0 0.8em;
   color: #00ffff;
   text-decoration: none;
   font-weight: bold;
@@ -37,7 +37,7 @@ canvas#bg {
 }
 
 section {
-  padding: 4em 2em;
+  padding: 2.5em 1.5em;
   max-width: 960px;
   margin: auto;
 }
@@ -46,6 +46,7 @@ section {
   text-align: center;
   margin-top: 2em;
   cursor: pointer;
+  position: relative;
 }
 
 #dynamic-logo {
@@ -54,6 +55,7 @@ section {
   font-weight: bold;
   transition: all 0.5s ease-in-out;
   text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  opacity: 1;
 }
 
 .click-pulse {
@@ -76,5 +78,52 @@ section {
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(5);
+  }
+}
+
+/* Sparkle and ripple for logo effect */
+.sparkle, .ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.sparkle {
+  width: 10px;
+  height: 10px;
+  background: #00ffff;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  animation: sparkle-anim 0.8s ease-out forwards;
+}
+
+.ripple {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #00ffff;
+  animation: ripple-anim 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-anim {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}
+
+@keyframes ripple-anim {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(4);
   }
 }
