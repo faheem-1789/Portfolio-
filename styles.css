@@ -65,8 +65,8 @@ canvas#bg {
 
 .circle {
   position: absolute;
-  border-radius: 25%;
-  border: 4px dashed;
+  border-radius: 50%;
+  border: 2px dashed;
   animation: spin 30s linear infinite, colorShift 5s ease-in-out infinite alternate;
   transform-origin: center;
 }
