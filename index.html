@@ -16,33 +16,20 @@
     <a href="#" onclick="showPage('skills')">🧠 Skills</a>
     <a href="#" onclick="showPage('contact')">📬 Contact</a>
   </div>
-    <div id="center-info">
-      <div class="logo-container" onclick="expandLogo()">
-        <div id="dynamic-logo">F</div>
-      </div>
-      <div id="info-text"></div>
+
+  <div id="center-info">
+    <div class="logo-container" onclick="expandLogo()">
+      <div id="dynamic-logo">F</div>
     </div>
+    <div id="info-text"></div>
+  </div>
+
   <div id="rotating-frame">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <!-- 60 circles dynamically rendered -->
+    <!-- You can also do this in JS if preferred -->
+    <!-- Below uses a manual approach for static hosting -->
+    <!-- Widths/animation delays defined in CSS -->
+    ${[...Array(60)].map(() => '<div class="circle"></div>').join('\n')}
   </div>
 
   <div class="nav-buttons">
@@ -61,7 +48,8 @@
       <img src="img/about.svg" class="section-img" alt="About Me"/>
       <h2>About Me</h2>
       <p>
-        Passionate CX Leader with 4+ years building scalable support operations across international markets. Obsessed with quality, systems, and results.
+        Passionate CX Leader with 4+ years building scalable support operations across international markets.
+        Obsessed with quality, systems, and results.
       </p>
     </section>
 
@@ -91,6 +79,7 @@
       <p><a href="resume_faheem.pdf" download>📄 Download Resume</a></p>
     </section>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
   <script src="canvas_background.js"></script>
